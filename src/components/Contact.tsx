@@ -1,0 +1,87 @@
+export default function Contact() {
+  return (
+    <section id="contact" className="bg-foreground text-card py-16 px-6">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="mb-12">CONTATO</h2>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block mb-2">
+                  Nome *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-card/10 border border-card/30 text-card placeholder:text-card/50 focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-card/10 border border-card/30 text-card placeholder:text-card/50 focus:outline-none focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block mb-2">
+                  Mensagem
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg bg-card/10 border border-card/30 text-card placeholder:text-card/50 focus:outline-none focus:border-primary resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
+
+          <div className="space-y-6">
+            <div>
+              <p className="leading-relaxed">
+                Rua Maceió de Ana Luisa, 2285, Ns Sñora<br />
+                Teresina - PI
+              </p>
+            </div>
+
+            <div>
+              <p className="leading-relaxed">
+                CNPJ: 00.000.000/0000-00
+              </p>
+            </div>
+
+            <div>
+              <p className="leading-relaxed">
+                Tel: (86) 3221-1234
+              </p>
+            </div>
+
+            <div>
+              <p className="leading-relaxed">
+                Email: funpapi@outlook.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
