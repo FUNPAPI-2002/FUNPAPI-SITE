@@ -1,9 +1,26 @@
 ---
-import MeuComponenteReact from '../components/App.tsx';
-import '../styles/default_shadcn_theme.css';
+import Layout from '../layouts/Layout.astro';
+
+// Importando os componentes React individuais que estão na sua pasta
+import Header from '../components/Header.tsx';
+import Hero from '../components/Hero.tsx';
+import About from '../components/About.tsx';
+import Projects from '../components/Projects.tsx';
+import Contact from '../components/Contact.tsx';
+import Footer from '../components/Footer.tsx';
+
+// O seu CSS base do Tailwind/Figma (verifique qual destes você deve manter baseado no seu projeto)
+import '../styles/theme.css';
+import '../styles/global.css';
 ---
-<html>
-  <body>
-    <MeuComponenteReact client:load /> 
-  </body>
-</html>
+
+<Layout title="NGO Website">
+  <Header client:load />
+  <main>
+    <Hero client:load />
+    <About client:load />
+    <Projects client:load />
+    <Contact client:load />
+  </main>
+  <Footer client:load />
+</Layout>
