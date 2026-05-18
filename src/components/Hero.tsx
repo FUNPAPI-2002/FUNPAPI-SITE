@@ -1,6 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-const heroImg = '/bb2b3e_8c1e90cc3c3b469c8a00abc7dedade5f_mv2.jpg';
+const heroImg = new URL("../imports/bb2b3e_8c1e90cc3c3b469c8a00abc7dedade5f_mv2.jpg", import.meta.url).href;
 
 export default function Hero() {
   return (
