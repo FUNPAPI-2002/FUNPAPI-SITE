@@ -11,10 +11,8 @@ export default function Contact() {
   method="POST" 
   className="space-y-6"
 >
-  <!-- Este campo oculto redireciona a pessoa de volta pro seu site após enviar -->
   <input type="hidden" name="_next" value="https://gdk-13.github.io/shaggy-solstice/" />
   
-  <!-- Este campo oculta o captcha chato para o usuário -->
   <input type="hidden" name="_captcha" value="false" />
               <div>
                 <label htmlFor="name" className="block mb-2">
