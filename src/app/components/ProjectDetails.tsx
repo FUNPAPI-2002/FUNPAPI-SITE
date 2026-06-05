@@ -1,14 +1,13 @@
-import { useParams, Link } from 'react-router';
+import { useParams, Link } from 'react-router-dom';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-// Mágica do Vite para puxar os JSONs
-const modules = import.meta.glob('../content/projetos/*.json', { eager: true });
+// Ajustado para voltar duas pastas
+const modules = import.meta.glob('../../content/projetos/*.json', { eager: true });
 
 export default function ProjectDetails() {
   const { id } = useParams();
 
-  // Procura exatamente o arquivo JSON que tem o mesmo ID/Nome do link
-  const projectPath = `../content/projetos/${id}.json`;
+  const projectPath = `../../content/projetos/${id}.json`;
   const projectData = modules[projectPath] ? (modules[projectPath] as any).default : null;
 
   if (!projectData) {

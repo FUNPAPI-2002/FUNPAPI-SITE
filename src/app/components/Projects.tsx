@@ -1,14 +1,13 @@
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom'; // <-- Corrigido aqui
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-// A mágica do Vite: Puxa todos os arquivos JSON da pasta automaticamente
-const modules = import.meta.glob('../content/projetos/*.json', { eager: true });
+// Ajustado para voltar duas pastas a partir de src/app/components/
+const modules = import.meta.glob('../../content/projetos/*.json', { eager: true });
 
 export default function Projects() {
-  // Transforma os arquivos encontrados numa lista (Array) de projetos
   const projects = Object.keys(modules).map((path) => {
     const data = (modules[path] as any).default;
-    const id = path.split('/').pop()?.replace('.json', ''); // O ID será o nome do arquivo
+    const id = path.split('/').pop()?.replace('.json', ''); 
     return { id, ...data };
   });
 
@@ -26,7 +25,6 @@ export default function Projects() {
             >
               <div className="h-64 overflow-hidden">
                 <ImageWithFallback
-                  // O BASE_URL garante que o link funcione no GitHub Pages
                   src={project.image ? `${import.meta.env.BASE_URL}${project.image}` : undefined}
                   alt={project.title}
                   className="w-full h-full object-cover"
