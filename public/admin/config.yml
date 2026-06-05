@@ -1,18 +1,20 @@
 backend:
   name: github
-  repo: GDK-13/shaggy-solstice # <-- MUDE ISTO PARA O SEU NOME DE UTILIZADOR
-  branch: master # ou master, consoante o nome da sua branch
+  repo: GDK-13/shaggy-solstice
+  branch: main
 
-media_folder: "src/app/imports" # Onde as imagens serão guardadas
-public_folder: "../imports" # O caminho que o CMS vai usar para mostrar as imagens
+media_folder: "public/media" # Onde o Decap vai salvar as imagens 
+public_folder: "media" # O texto que o Decap vai escrever no arquivo
 
 collections:
   - name: "projetos"
     label: "Ações e Projetos"
-    folder: "src/content/projetos" # Onde os dados dos projetos vão ficar guardados
+    folder: "src/content/projetos"
     create: true
-    slug: "{{year}}-{{month}}-{{slug}}"
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
     fields:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descrição", name: "description", widget: "text"}
-      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Imagem", name: "image", widget: "image", required: false}

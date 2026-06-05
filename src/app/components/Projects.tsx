@@ -1,30 +1,16 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import img1 from "../../imports/Sunrise_over_Bali_Jungle.jpg";
-import img2 from "../../imports/Lush_Green_Plants_Thriving_in_a_Greenhouse_Bathed_in_Sunlight_Showing_Vibrant_Foliage_and_Water_Droplets.jpg";
-import img3 from "../../imports/View_of_the_Nature_of_Moldova.jpg";
 import { Link } from 'react-router';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+
+// A mágica do Vite: Puxa todos os arquivos JSON da pasta automaticamente
+const modules = import.meta.glob('../content/projetos/*.json', { eager: true });
 
 export default function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "LOREM IPSUM",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eros massa, pulvinar elemod tempor posuere.",
-      image: img1
-    },
-    {
-      id: 2,
-      title: "LOREM IPSUM",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eros massa, pulvinar elemod tempor posuere.",
-      image: img2
-    },
-    {
-      id: 3,
-      title: "LOREM IPSUM",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eros massa, pulvinar elemod tempor posuere.",
-      image: img3
-    }
-  ];
+  // Transforma os arquivos encontrados numa lista (Array) de projetos
+  const projects = Object.keys(modules).map((path) => {
+    const data = (modules[path] as any).default;
+    const id = path.split('/').pop()?.replace('.json', ''); // O ID será o nome do arquivo
+    return { id, ...data };
+  });
 
   return (
     <section id="projects" className="bg-background py-16 px-6">
@@ -40,14 +26,15 @@ export default function Projects() {
             >
               <div className="h-64 overflow-hidden">
                 <ImageWithFallback
-                  src={project.image}
+                  // O BASE_URL garante que o link funcione no GitHub Pages
+                  src={project.image ? `${import.meta.env.BASE_URL}${project.image}` : undefined}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
                 <h3 className="mb-3">{project.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
                 <span className="text-primary mt-4 inline-block font-medium">Ver detalhes &rarr;</span>
