@@ -10,7 +10,7 @@ export default function ProjectDetails() {
   // O useParams pega o ID do projeto que está na URL (ex: /projeto/1)
   const { id } = useParams();
 
-  // Esta é a mesma lista do Projects.tsx (por enquanto)
+  // Esta é a mesma lista do Projects.tsx (por enquanto).
   const projects = [
     { id: 1, title: "LOREM IPSUM 1", description: "Descrição completa do projeto 1...", image: img1 },
     { id: 2, title: "LOREM IPSUM 2", description: "Descrição completa do projeto 2...", image: img2 },
