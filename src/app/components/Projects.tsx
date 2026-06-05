@@ -2,6 +2,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import img1 from "../../imports/Sunrise_over_Bali_Jungle.jpg";
 import img2 from "../../imports/Lush_Green_Plants_Thriving_in_a_Greenhouse_Bathed_in_Sunlight_Showing_Vibrant_Foliage_and_Water_Droplets.jpg";
 import img3 from "../../imports/View_of_the_Nature_of_Moldova.jpg";
+import { Link } from 'react-router';
 
 export default function Projects() {
   const projects = [
@@ -32,7 +33,11 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="bg-card rounded-2xl overflow-hidden shadow-md">
+            <Link 
+              to={`/projeto/${project.id}`} 
+              key={project.id} 
+              className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer block"
+            >
               <div className="h-64 overflow-hidden">
                 <ImageWithFallback
                   src={project.image}
@@ -45,8 +50,9 @@ export default function Projects() {
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
+                <span className="text-primary mt-4 inline-block font-medium">Ver detalhes &rarr;</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
