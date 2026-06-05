@@ -2,9 +2,9 @@ import { useParams, Link } from 'react-router';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 // Importamos as imagens com ?url igual fizemos antes
-import img1 from '../imports/Sunrise_over_Bali_Jungle.jpg?url';
-import img2 from '../imports/Lush_Green_Plants_Thriving_in_a_Greenhouse_Bathed_in_Sunlight_Showing_Vibrant_Foliage_and_Water_Droplets.jpg?url';
-import img3 from '../imports/View_of_the_Nature_of_Moldova.jpg?url';
+import img1 from '../../imports/Sunrise_over_Bali_Jungle.jpg?url';
+import img2 from '../../imports/Lush_Green_Plants_Thriving_in_a_Greenhouse_Bathed_in_Sunlight_Showing_Vibrant_Foliage_and_Water_Droplets.jpg?url';
+import img3 from '../../imports/View_of_the_Nature_of_Moldova.jpg?url';
 
 export default function ProjectDetails() {
   // O useParams pega o ID do projeto que está na URL (ex: /projeto/1)
