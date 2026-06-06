@@ -2,7 +2,6 @@ backend:
   name: github
   repo: GDK-13/shaggy-solstice
   branch: main
-  app_id: "Ov23li5wAkSFepKEMny9" # <-- Cole aqui o código que copiou
 
 media_folder: "public/media"
 public_folder: "media"
