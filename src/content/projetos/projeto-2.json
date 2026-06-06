@@ -1,5 +1,9 @@
 {
   "title": "Projeto 2",
   "description": "é um projeto",
-  "image": "/media/bb2b3e_8c1e90cc3c3b469c8a00abc7dedade5f_mv2.jpg"
+  "image": "/media/bb2b3e_8c1e90cc3c3b469c8a00abc7dedade5f_mv2.jpg",
+  "gallery": [
+    "/media/Sunrise_over_Bali_Jungle.jpg",
+    "/media/View_of_the_Nature_of_Moldova.jpg"
+  ]
 }
