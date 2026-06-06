@@ -15,10 +15,17 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     format: "json"
-    fields:
+fields:
       - {label: "Título", name: "title", widget: "string"}
-      # Trocamos widget "text" por "markdown" para habilitar formatação:
-      - {label: "Descrição", name: "description", widget: "markdown"}
-      - {label: "Imagem Principal", name: "image", widget: "image", required: false}
-      # Nova funcionalidade de Galeria Infinita usando "list":
-      - {label: "Galeria de Fotos Extras", name: "gallery", widget: "list", field: {label: "Foto", name: "photo", widget: "image"}, required: false}
+      # Novo campo dedicado para o card:
+      - {label: "Resumo para o Card", name: "short_description", widget: "text", hint: "Texto curto e direto que vai aparecer na página inicial."}
+      - {label: "Descrição Completa", name: "description", widget: "markdown"}
+      - {label: "Imagem Principal (Capa)", name: "image", widget: "image", required: false}
+      - {label: "Legenda da Capa", name: "image_caption", widget: "string", required: false}
+      - label: "Galeria de Fotos Extras"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Foto", name: "photo", widget: "image"}
+          - {label: "Legenda da Foto", name: "caption", widget: "string", required: false}

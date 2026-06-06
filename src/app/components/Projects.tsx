@@ -3,7 +3,6 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const modules = import.meta.glob('../../content/projetos/*.json', { eager: true });
 
-// Função inteligente para evitar barras duplas no link
 const getSafeImageUrl = (img?: string) => {
   if (!img) return undefined;
   const cleanImg = img.startsWith('/') ? img.substring(1) : img;
@@ -31,7 +30,6 @@ export default function Projects() {
             >
               <div className="h-64 overflow-hidden">
                 <ImageWithFallback
-                  // Usamos a função nova aqui!
                   src={getSafeImageUrl(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -39,10 +37,13 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="mb-3">{project.title}</h3>
-                <p className="text-muted-foreground leading-relaxed line-clamp-3">
-                  {project.description}
+                
+                {/* Aqui agora puxamos o resumo dedicado que você vai preencher no painel! */}
+                <p className="text-muted-foreground leading-relaxed line-clamp-3 text-sm">
+                  {project.short_description}
                 </p>
-                <span className="text-primary mt-4 inline-block font-medium">Ver detalhes &rarr;</span>
+                
+                <span className="text-primary mt-4 inline-block font-medium text-sm">Ver detalhes &rarr;</span>
               </div>
             </Link>
           ))}
