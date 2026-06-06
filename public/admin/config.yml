@@ -15,7 +15,7 @@ collections:
     slug: "{{slug}}"
     extension: "json"
     format: "json"
-fields:
+    fields:
       - {label: "Título", name: "title", widget: "string"}
       # Novo campo dedicado para o card:
       - {label: "Resumo para o Card", name: "short_description", widget: "text", hint: "Texto curto e direto que vai aparecer na página inicial."}
