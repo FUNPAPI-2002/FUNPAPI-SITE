@@ -17,5 +17,8 @@ collections:
     format: "json"
     fields:
       - {label: "Título", name: "title", widget: "string"}
-      - {label: "Descrição", name: "description", widget: "text"}
-      - {label: "Imagem", name: "image", widget: "image", required: false}
+      # Trocamos widget "text" por "markdown" para habilitar formatação:
+      - {label: "Descrição", name: "description", widget: "markdown"}
+      - {label: "Imagem Principal", name: "image", widget: "image", required: false}
+      # Nova funcionalidade de Galeria Infinita usando "list":
+      - {label: "Galeria de Fotos Extras", name: "gallery", widget: "list", field: {label: "Foto", name: "photo", widget: "image"}, required: false}
