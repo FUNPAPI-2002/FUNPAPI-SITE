@@ -1,8 +1,14 @@
-import { Link } from 'react-router-dom'; // <-- Corrigido aqui
+import { Link } from 'react-router-dom';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-// Ajustado para voltar duas pastas a partir de src/app/components/
 const modules = import.meta.glob('../../content/projetos/*.json', { eager: true });
+
+// Função inteligente para evitar barras duplas no link
+const getSafeImageUrl = (img?: string) => {
+  if (!img) return undefined;
+  const cleanImg = img.startsWith('/') ? img.substring(1) : img;
+  return `${import.meta.env.BASE_URL}${cleanImg}`;
+};
 
 export default function Projects() {
   const projects = Object.keys(modules).map((path) => {
@@ -25,7 +31,8 @@ export default function Projects() {
             >
               <div className="h-64 overflow-hidden">
                 <ImageWithFallback
-                  src={project.image ? `${import.meta.env.BASE_URL}${project.image}` : undefined}
+                  // Usamos a função nova aqui!
+                  src={getSafeImageUrl(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
