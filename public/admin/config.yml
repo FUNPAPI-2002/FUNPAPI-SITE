@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: GDK-13/shaggy-solstice
-  branch: main
+  branch: master
 
 media_folder: "public/media"
 public_folder: "media"
