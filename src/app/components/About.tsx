@@ -7,7 +7,7 @@ export default function About() {
           A Fundação de proteção ao meio Ambiente e Ecoturismo do Estado do Piauí – Funpapi foi constituída em 2002 com atuação há 18 anos. É uma entidade sem fins lucrativos, de direito privado, reconhecida pelo Município de Teresina como de Utilidade Pública através da Lei nº 3579 de 20/11/2006. A Fundação é formada por sócio-fundadores, colaboradores e parceiros, constituindo equipes multiprofissionais que atuam nas áreas de agronomia, jornalismo, administração, direito, biologia, economia, assistência social e pedagogia dentro de uma perspectiva interdisciplinar, visando a complementariedade do saber.
         </p>
         <p className="text-foreground leading-relaxed">
-          A ONG atua em diversas frentes de trabalho, cientes de que deles depende uma perspectiva interdisciplinar, visando um futuro melhor para quem necessita.
+          A ONG atua em diversas frentes de trabalho, ciente de que delas depende uma perspectiva interdisciplinar, visando a um futuro melhor para quem necessita.
         </p>
       </div>
     </section>
