@@ -64,26 +64,26 @@ export default function Contact() {
           <div className="space-y-6">
             <div>
               <p className="leading-relaxed">
-                Rua Maceió de Ana Luisa, 2285, Ns Sñora<br />
-                Teresina - PI
+                Rua Fabrício de Area Leao, 2350, Pq. Itararé<br />
+                CEP : 64078-770 - Teresina - PI
               </p>
             </div>
 
             <div>
               <p className="leading-relaxed">
-                CNPJ: 00.000.000/0000-00
+                CNPJ: 05.201.972/0001-68
               </p>
             </div>
 
             <div>
               <p className="leading-relaxed">
-                Tel: (86) 3221-1234
+                Fone: (86) 3081-3803 / 3217-1600
               </p>
             </div>
 
             <div>
               <p className="leading-relaxed">
-                Email: funpapi@outlook.com
+                Email – funpapi@hotmail.com
               </p>
             </div>
           </div>
