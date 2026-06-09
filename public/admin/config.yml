@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: GDK-13/shaggy-solstice
-  branch: master
+  repo: FUNPAPI-2002/FUNPAPI-SITE # <-- Deve ficar exatamente assim
+  branch: master # ou main, dependendo da sua branch padrão
 
 media_folder: "public/media"
 public_folder: "media"
@@ -17,7 +17,6 @@ collections:
     format: "json"
     fields:
       - {label: "Título", name: "title", widget: "string"}
-      # Novo campo dedicado para o card:
       - {label: "Resumo para o Card", name: "short_description", widget: "text", hint: "Texto curto e direto que vai aparecer na página inicial."}
       - {label: "Descrição Completa", name: "description", widget: "markdown"}
       - {label: "Imagem Principal (Capa)", name: "image", widget: "image", required: false}

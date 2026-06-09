@@ -7,11 +7,11 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <form 
-  action="https://formsubmit.co/kevingdkt@gmail.com" 
+  action="https://formsubmit.co/funpapi@hotmail.com" 
   method="POST" 
   className="space-y-6"
 >
-  <input type="hidden" name="_next" value="https://gdk-13.github.io/shaggy-solstice/" />
+  <input type="hidden" name="_next" value="https://FUNPAPI-2002.github.io/FUNPAPI-SITE/" />
   
   <input type="hidden" name="_captcha" value="false" />
               <div>
