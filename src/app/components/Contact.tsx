@@ -7,7 +7,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <form 
-  action="https://formsubmit.co/funpapi2012@gmail.com" 
+  action="https://formsubmit.co/5022033054e9ab830d90f6a8b7ff6dce" 
   method="POST" 
   className="space-y-6"
 >
