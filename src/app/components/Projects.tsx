@@ -15,7 +15,7 @@ export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
   
   // Quantidade de cards por página (pode alterar este número!)
-  const PROJECTS_PER_PAGE = 9; 
+  const PROJECTS_PER_PAGE = 6; 
 
   // Puxa todos os projetos
   const projects = Object.keys(modules).map((path) => {
