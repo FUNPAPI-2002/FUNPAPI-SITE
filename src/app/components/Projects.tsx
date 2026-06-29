@@ -22,7 +22,7 @@ export default function Projects() {
     const data = (modules[path] as any).default;
     const id = path.split('/').pop()?.replace('.json', ''); 
     return { id, ...data };
-  });
+  }).sort((a, b) => (a.order ?? 999) - (b.order ?? 999)); 
 
   // Cálculos matemáticos da paginação
   const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
