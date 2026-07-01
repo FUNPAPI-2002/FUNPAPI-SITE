@@ -84,6 +84,10 @@ export default function Contact() {
             <div>
               <p className="leading-relaxed">
                 Email – funpapi@hotmail.com
+              </p>
+            </div>
+            <div>
+              <p className="leading-relaxed">
                 Email – funpapi2012@gmail.com
               </p>
             </div>
