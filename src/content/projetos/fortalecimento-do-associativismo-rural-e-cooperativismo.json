@@ -1,9 +1,30 @@
 {
-  "order": 2,
   "title": "Fortalecimento do Associativismo Rural e Cooperativismo no Estado do Piauí",
   "short_description": "Iniciativa focada em empoderar mulheres e jovens por meio do fortalecimento de 60 entidades associativas e cooperativas em 60 municípios piauienses para impulsionar o desenvolvimento socioeconômico.",
   "description": "Fortalecer entidades representativas do associativismo e do cooperativismo no Estado do Piauí, como forma de torna-las ativas no seu papel de articuladoras do desenvolvimento socioeconômico com ampla participação e empoderamento de mulheres e jovens no processo de organização local e estadual. Abrangendo 60 municípios piauienses envolvendo 60 entidades associativas/cooperativas.",
-  "image": "",
+  "image": "/media/DSC04596.webp",
   "image_caption": "",
-  "gallery": []
+  "gallery": [
+    {
+      "photo": "/media/DSC04572.webp",
+      "caption": ""
+    },
+    {
+      "photo": "/media/20140404_115347.webp",
+      "caption": ""
+    },
+    {
+      "photo": "/media/20140411_102454.webp",
+      "caption": ""
+    },
+    {
+      "photo": "/media/20140409_104612 (1)_resultado.webp",
+      "caption": ""
+    },
+    {
+      "photo": "/media/20140403_090426_resultado.webp",
+      "caption": ""
+    }
+  ],
+  "order": 2
 }
