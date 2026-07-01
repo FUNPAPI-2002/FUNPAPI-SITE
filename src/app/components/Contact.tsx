@@ -77,13 +77,14 @@ export default function Contact() {
 
             <div>
               <p className="leading-relaxed">
-                Fone: (86) 3081-3803 / 3217-1600
+                Fone: (86) 3081-3803
               </p>
             </div>
 
             <div>
               <p className="leading-relaxed">
                 Email – funpapi@hotmail.com
+                Email – funpapi2012@gmail.com
               </p>
             </div>
           </div>
